@@ -1,0 +1,46 @@
+@if (show) {
+<div class="bg-primary min-h-screen max-w-screen overflow-x-hidden">
+  <div class="sticky top-0 z-50">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="flex flex-col-reverse md:flex-row sm:flex-col-reverse justify-center items-center h-full w-full">
+    <div class="flex flex-col items-center p-4 md:mr-20">
+      <img class="mb-4" src="assets/images/ContactAlien.svg" alt="Failed to load image" loading="lazy" />
+      <div class="flex flex-col items-center">
+        <p class="text-white font-sans m-2">
+          <i class="pi pi-mobile pr-2"></i>{{ 'contact.phone' | translate }}
+        </p>
+        <p class="text-white font-sans m-2">
+          <i class="pi pi-envelope pr-2"></i>{{ 'contact.email' | translate }}
+        </p>
+        <p class="text-white font-sans m-2">
+          <a href="https://www.linkedin.com/in/pamela-lotriet-b4a1a0169/"><i class="pi pi-linkedin pr-2"></i>{{
+            'contact.linkdn' | translate }}</a>
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col p-4">
+      <h1 class="text-white text-5xl font-bangers mb-2 text-left">
+        {{ 'contact.heading' | translate }}
+      </h1>
+      <h2 class="text-white text-lg font-sans mb-8 text-left">
+        {{ 'contact.subHeading' | translate }}
+      </h2>
+      <div class="flex flex-col items-center md:items-start">
+        <app-textarea [placeholder]="'contact.emailPlaceholder' | translate"
+          classElements="h-16 w-96 md:w-713 resize-none mt-8 mb-8 sm:w-[calc(100vw-40px)]"></app-textarea>
+        <app-textarea [placeholder]="'contact.messagePlaceholder' | translate"
+          classElements="h-260 w-96 md:w-713 resize-none  sm:w-[calc(100vw-40px)]"></app-textarea>
+        <div class="flex flex-row-reverse w-full justify-end md:justify-start">
+          <app-button [text]="'contact.buttonText' | translate"
+            classElements="text-sm h-35 w-120 rounded-20px bg-primary text-white shadow-custom hover:shadow-custom-hover focus:shadow-custom-focus text-3xl mt-8 mb-8 border-none text-bangers cursor-pointer"></app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+} @else {
+<div class="flex justify-center items-center h-screen w-screen overflow-hidden bg-primary">
+  <img class="animate-runaccross" src="assets/images/spaceship.svg" alt="Error loading image" loading="lazy" />
+</div>
+}

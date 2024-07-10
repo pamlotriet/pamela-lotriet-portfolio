@@ -1,0 +1,62 @@
+{
+  "home": {
+    "buttons": {
+      "about": "ABOUT ME",
+      "work": "MY WORK",
+      "contact": "CONTACT ME",
+      "aboutLink": "about",
+      "workLink": "work",
+      "contactLink": "contact"
+    }
+  },
+  "about": {
+    "buttons": {
+      "backHomeText": "HOME",
+      "backHomeLink": ""
+    },
+    "headings": {
+      "about": "ABOUT ME"
+    },
+    "paragraphsList": [
+      {
+        "paragraph": "I am highly skilled and motivated software developer with a strong background in designing, developing, and implementing software solutions. I am dedicated to delivering high-quality and efficient code solutions. With 1 year and 5 months of experience in the industry, I have a proven track record of successfully completing complex projects and collaborating effectively within cross-functional teams."
+      },
+      {
+        "paragraph": "My expertise lies in full-stack development, encompassing front-end and back-end technologies.I am Proficient in programming languages such as Java, Python, JavaScript,Typescript ,Net Core and have recently engaged in learning Flutter.I am adept at developing scalable web applications, APIs, and mobile applications. I have hands-on experience with various frameworks and libraries, including VueJs, Angular, and Spring."
+      },
+      {
+        "paragraph": "I am experienced in the entire software development lifecycle, from requirement gathering and ensuring code quality through rigorous testing and debugging processes. Additionally, I am well-versed in version control systems like Git and have a solid understanding of agile development methodologies, enabling me to adapt quickly to changing project requirements and deliver results within deadlines."
+      },
+      {
+        "paragraph": "As a strong problem-solver, I thrive on challenges and enjoy finding innovative solutions to complex technical problems. I possess excellent analytical and communication skills, allowing me to effectively collaborate with stakeholders, understand their needs, and translate them into functional software applications. I am committed to continuous learning and staying updated with the latest industry trends, ensuring the adoption of best practices and the integration of cutting-edge technologies into my work."
+      }
+    ]
+  },
+  "projects": {
+    "heading": "MY PROJECTS",
+    "projectList": [
+      {
+        "title": "The Smile Foundation Project",
+        "description": "This was a personal project that I worked on. The problem I identified and tried to solve was that there was no central place that people could use to make donations to more than one charity at a time without having to continuously browse to different websites. My responsibilities for this project included designing and creating the frontend for the project, creating a database for the project and integrating the frontend and backend with each other so that they could communicate. The technology used here was .NetCore, SQL Server and VueJS.",
+        "image": "assets/images/project1.svg",
+        "link": ""
+      },
+      {
+        "title": "Platinum Stars Nursery School Website",
+        "description": "The Platinum Stars Nursery School Website project was an exciting venture aimed at creating a vibrant online presence for the school. I focused on enhancing accessibility and engagement, designing and developing the frontend with Angular and Tailwind CSS. The result was a visually appealing, warm, and accessible website, inviting visitors to explore its offerings. With intuitive navigation and user-centric design, parents could easily access essential information, updates, and resources. Though there was no database integration, the use of modern technologies ensured seamless functionality and performance, capturing the essence of the nursery school. This project showcased innovation and creativity, offering a delightful online experience for all.",
+        "image": "assets/images/project2.svg",
+        "link": ""
+      }
+    ]
+  },
+  "contact":{
+    "heading":"CONTACT ME",
+    "subHeading":"Send me a message and I will get back to you",
+    "phone": "068 4233 681",
+    "email": "pamela.lotriet@gmail.com",
+    "linkdn": "Pamela Lotriet",
+    "emailPlaceholder": "Please Enter your email address",
+    "messagePlaceholder":"Please Enter your message",
+    "buttonText": "SEND"
+  }
+}

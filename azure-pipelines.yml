@@ -1,0 +1,34 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g @angular/cli
+    cd pamela-portfolio
+    npm install primeicons primeng tailwindcss postcss autoprefixer
+    npm install
+    ng build --output-path=dist/pamela-portfolio/browser
+  displayName: 'Install Angular CLI, Install Packages, and Build Project'
+
+# The following step is not necessary for deployment and can be omitted
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     pathToPublish: '$(System.DefaultWorkingDirectory)/pamela-portfolio/dist/pamela-portfolio'
+#     artifactName: 'pamela-portfolio'
+#     publishLocation: 'Container'
+#   displayName: 'Publish Build Artifacts'
+
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: 'pamela-portfolio' # Location of your application code
+    output_location: 'dist/pamela-portfolio/browser' # Location of the build output relative to app_location
+    azure_static_web_apps_api_token: $(deployment_token) # Set this as a secret variable in your pipeline
+  displayName: 'Deploy to Azure Static Web Apps'

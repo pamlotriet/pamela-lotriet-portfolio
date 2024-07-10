@@ -1,0 +1,44 @@
+@if (show) {
+  <div class="flex flex-col bg-primary pb-4">
+    <div class="sticky top-0">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="flex flex-col-reverse md:flex-row flex-grow px-4 md:px-6">
+      <div class="md:w-2/3 m-10 items-center justify-center">
+        <h1 class="text-white text-4xl font-bangers mb-8">
+          {{ 'about.headings.about' | translate }}
+        </h1>
+        <div class="overflow-y-auto h-591 pr-8 custom-scrollbar">
+          <div *ngFor="let paragraph of paragraphs$ | async">
+            <p class="text-xl font-sans text-white text-justify mb-8">
+              {{ paragraph.paragraph | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-1/3 flex justify-center items-center">
+        <div
+          class="flex justify-center items-center w-340 h-591 rounded-20px shadow-custom-image-container"
+        >
+          <img
+            class="w-285 h-536"
+            src="assets/images/pamAbout.svg"
+            alt="Error loading image"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div
+    class="flex justify-center items-center h-screen w-screen overflow-hidden bg-primary"
+  >
+    <img
+      class="animate-runaccross"
+      src="assets/images/spaceship.svg"
+      alt="Error loading image"
+      loading="lazy"
+    />
+  </div>
+}
