@@ -81,3 +81,10 @@ This project is set up with a CI/CD pipeline on Azure to ensure seamless deploym
 - HTML5 & CSS3
 - Prettier
 - ESLint
+
+## Contact
+For any inquiries or feedback, please contact:
+
+- Name: Pamela Lotriet
+- Email: pamela.lotriet@gmail.com
+- GitHub: pamlotriet
