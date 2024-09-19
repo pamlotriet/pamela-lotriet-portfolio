@@ -12,7 +12,8 @@ import {
 } from '@angular/common/http';
 import { CustomTranslateLoader } from './shared/translators/translate-loader';
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideRouter, Routes } from '@angular/router';
+import { provideRouter } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,6 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(withInterceptorsFromDi()),
     importProvidersFrom(
+      BrowserAnimationsModule,
       HttpClient,
       TranslateModule.forRoot({
         defaultLanguage: 'en',
