@@ -12,13 +12,18 @@ import {
 } from '@angular/common/http';
 import { CustomTranslateLoader } from './shared/translators/translate-loader';
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'top',
+      })
+    ),
     provideClientHydration(),
     provideHttpClient(withInterceptorsFromDi()),
     importProvidersFrom(
