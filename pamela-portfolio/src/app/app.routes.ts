@@ -1,24 +1,32 @@
 import { Routes } from '@angular/router';
-import { LandingComponent } from './pages/landing/landing.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: LandingComponent,
+    loadComponent: () =>
+      import('./pages/landing/landing.component').then(
+        (component) => component.LandingComponent
+      ),
   },
   {
     path: 'about',
-    component: AboutComponent,
+    loadComponent: () =>
+      import('./pages/about/about.component').then(
+        (component) => component.AboutComponent
+      ),
   },
   {
     path: 'projects',
-    component: ProjectsComponent,
+    loadComponent: () =>
+      import('./pages/projects/projects.component').then(
+        (component) => component.ProjectsComponent
+      ),
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    loadComponent: () =>
+      import('./pages/contact/contact.component').then(
+        (component) => component.ContactComponent
+      ),
   },
 ];
