@@ -6,7 +6,8 @@ module.exports = {
       primary: '#800020',
       white: '#FFFFFF',
       black:'#000000',
-      grey:'#2C2B2B'
+      grey:'#2C2B2B',
+      red:'#FF0000'
     },
     extend: {
       width: {

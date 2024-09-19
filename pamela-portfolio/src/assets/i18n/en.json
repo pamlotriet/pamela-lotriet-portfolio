@@ -87,7 +87,17 @@
     "emailPlaceholder": "Email Address",
     "subjectPlaceholder": "Subject",
     "messagePlaceholder":"Message",
-    "buttonText": "SEND"
+    "buttonText": "SEND",
+    "nameRequired": "Name is required.",
+    "nameMinLength": "Name must be at least 3 characters long.",
+    "nameMaxLength": "Name cannot be more than 50 characters.",
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Please enter a valid email address.",
+    "subjectRequired": "Subject is required.",
+    "subjectMinLength": "Subject must be at least 5 characters long.",
+    "messageRequired": "Message is required.",
+    "messageMinLength": "Message must be at least 10 characters long.",
+    "messageMaxLength": "Message cannot be more than 500 characters."
   },
   "home":{
     "heading":"Hi!",

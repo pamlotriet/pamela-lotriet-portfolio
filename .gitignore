@@ -1,1 +1,44 @@
-node_modules
+# NPM dependencies
+node_modules/
+# Optional npm cache directory
+.npm/
+
+# Angular build files
+dist/
+out-tsc/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Optional log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Angular Environment files
+/src/environments/*.ts
+!src/environments/environment.prod.ts  # Keep production environment
+
+# Compiled TypeScript
+*.js
+*.js.map
+
+# Service worker
+ngsw-worker.js
+ngsw.json
+
+# Optional: operating system files
+.DS_Store
+Thumbs.db
+
+# Mac system files
+*.swp
+
+# Coverage reports
+coverage/
+
+# Temporary files
+.tmp/
+temp/

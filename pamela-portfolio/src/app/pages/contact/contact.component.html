@@ -2,47 +2,123 @@
     class="flex flex-col md:flex-row lg:flex-row xl:flex-row h-full w-screen p-12 md:p-24 lg:p-24 xls:p-24 md:fixed lg:fixed xl:fixed">
     <div class="flex flex-col text-white md:w-4/5 lg:w-4/5 xl:w-4/5 justify-center items-center">
         <div class="flex flex-col md:w-4/6 lg:w-4/6 xl:w-4/6">
-            <h1 class="text-white text-4xl font-kiteOne mb-6">{{"contact.heading" | translate}}</h1>
-            <p>{{"contact.detail" | translate}}</p>
+            <h1 class="text-white text-4xl font-kiteOne mb-6">
+                {{ 'contact.heading' | translate }}
+            </h1>
+            <p>{{ 'contact.detail' | translate }}</p>
             <div class="flex flex-col mt-12">
                 <div class="flex flex-row items-center mb-2 mt-2">
-                    <div class="flex items-center justify-center rounded-full bg-primary h-12 w-12  mr-4">
+                    <div class="flex items-center justify-center rounded-full bg-primary h-12 w-12 mr-4">
                         <i class="pi pi-phone text-xl text-white"></i>
                     </div>
-                    <label class="text-xl">{{'contact.phone' | translate}}</label>
+                    <label class="text-xl">{{ 'contact.phone' | translate }}</label>
                 </div>
                 <div class="flex flex-row items-center mt-2 mb-20">
                     <div class="flex flex-row items-center justify-center rounded-full bg-primary h-12 w-12 mr-4">
                         <i class="pi pi-envelope text-xl text-white"></i>
                     </div>
-                    <label class="text-xl">{{'contact.email' | translate}}</label>
+                    <label class="text-xl">{{ 'contact.email' | translate }}</label>
                 </div>
             </div>
         </div>
     </div>
     <div class="flex flex-col w-full md:w-4/5 lg:w-4/5 xl:w-4/5 justify-center items-center">
-        <div class="flex w-full flex-col">
-            <div class="grid grid-cols-2 gap-4 mb-8">
-                <div class="grid col-span-1">
+        <form [formGroup]="contactForm">
+            <div class="flex w-full flex-col">
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="grid col-span-1">
+                        <input type="text" class="rounded-xl bg-grey text-white h-10 w-full p-4"
+                            placeholder="{{ 'contact.namePlaceholder' | translate }}" formControlName="from_name" />
+                        @if (
+                        name?.invalid &&
+                        (contactForm.controls['from_name'].touched || name?.dirty)
+                        ) {
+                        @if (name?.errors?.['required']) {
+                        <div class="text-red text-xs ml-2">
+                            {{ 'contact.nameRequired' | translate }}
+                        </div>
+                        }
+                        @if (name?.errors?.['minlength']) {
+                        <div class="text-red text-xs ml-2">
+                            {{ 'contact.nameMinLength' | translate }}
+                        </div>
+                        }
+                        @if (name?.errors?.['maxlength']) {
+                        <div class="text-red text-xs ml-2">
+                            {{ 'contact.nameMaxLength' | translate }}
+                        </div>
+                        }
+                        }
+                    </div>
+                    <div class="grid col-span-1">
+                        <input type="email" class="rounded-xl bg-grey text-white h-10 w-full p-4"
+                            placeholder="{{ 'contact.emailPlaceholder' | translate }}" formControlName="from_email" />
+
+                        @if (
+                        email?.invalid &&
+                        (contactForm.controls['from_email'].touched || email?.dirty)
+                        ) {
+                        @if (email?.errors?.['required']) {
+                        <div class="text-red text-xs ml-2">
+                            {{ 'contact.emailRequired' | translate }}
+                        </div>
+                        }
+                        @if (email?.errors?.['email']) {
+                        <div class="text-red text-xs ml-2">
+                            {{ 'contact.emailInvalid' | translate }}
+                        </div>
+                        }
+                        }
+                    </div>
+                </div>
+                <div class="flex flex-col mb-8">
                     <input type="text" class="rounded-xl bg-grey text-white h-10 w-full p-4"
-                        placeholder="{{ 'contact.namePlaceholder' | translate }}">
+                        placeholder="{{ 'contact.subjectPlaceholder' | translate }}" formControlName="subject" />
+                    @if (
+                    subject?.invalid &&
+                    (contactForm.controls['subject'].touched || subject?.dirty)
+                    ) {
+                    @if (subject?.errors?.['required']) {
+                    <div class="text-red text-xs ml-2">
+                        {{ 'contact.subjectRequired' | translate }}
+                    </div>
+                    }
+                    @if (subject?.errors?.['minlength']) {
+                    <div class="text-red text-xs ml-2">
+                        {{ 'contact.subjectMinLength' | translate }}
+                    </div>
+                    }
+                    }
                 </div>
-                <div class="grid col-span-1">
-                    <input type="email" class="rounded-xl bg-grey text-white h-10  w-full p-4"
-                        placeholder="{{ 'contact.emailPlaceholder' | translate }}">
+                <div class="flex flex-col mb-8">
+                    <textarea type="text" class="rounded-xl bg-grey text-white h-56 w-full resize-none p-4"
+                        placeholder="{{ 'contact.messagePlaceholder' | translate }}"
+                        formControlName="message"></textarea>
+                    @if (
+                    message?.invalid &&
+                    (contactForm.controls['message'].touched || message?.dirty)
+                    ) {
+                    @if (message?.errors?.['required']) {
+                    <div class="text-red text-xs ml-2">
+                        {{ 'contact.messageRequired' | translate }}
+                    </div>
+                    }
+                    @if (message?.errors?.['minlength']) {
+                    <div class="text-red text-xs ml-2">
+                        {{ 'contact.messageMinLength' | translate }}
+                    </div>
+                    }
+                    @if (message?.errors?.['maxlength']) {
+                    <div class="text-red text-xs ml-2">
+                        {{ 'contact.messageMaxLength' | translate }}
+                    </div>
+                    }
+                    }
+                </div>
+                <div class="flex flex-row-reverse mb-8">
+                    <app-button text="{{ 'contact.buttonText' | translate }}" (click)="buttonClick()"></app-button>
                 </div>
             </div>
-            <div class="flex mb-8">
-                <input type="text" class="rounded-xl bg-grey text-white h-10  w-full p-4"
-                    placeholder="{{ 'contact.subjectPlaceholder' | translate }}">
-            </div>
-            <div class="flex mb-8">
-                <textarea type="text" class="rounded-xl bg-grey text-white h-56  w-full resize-none p-4"
-                    placeholder="{{ 'contact.messagePlaceholder' | translate }}"></textarea>
-            </div>
-            <div class="flex flex-row-reverse mb-8">
-                <app-button text="{{ 'contact.buttonText' | translate }}"></app-button>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
