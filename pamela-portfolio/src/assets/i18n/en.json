@@ -1,62 +1,115 @@
 {
-  "home": {
-    "buttons": {
-      "about": "ABOUT ME",
-      "work": "MY WORK",
-      "contact": "CONTACT ME",
-      "aboutLink": "about",
-      "workLink": "work",
-      "contactLink": "contact"
+  "navbar":{
+    "routes":[
+      {"name":"Home", "link":""},
+      {"name":"About", "link":"about"},
+      {"name":"Projects", "link":"projects"},
+      {"name":"Contact", "link":"contact"}
+    ],
+    "mediaIcons":[
+      {"icon":"pi pi-linkedin","link":"https://www.linkedin.com/in/pamela-lotriet-b4a1a0169/"},
+      {"icon":"pi pi-github","link":"https://github.com/pamlotriet"}
+    ]
+  },
+  "skills":[
+    {"skill":"Angular", "percentage":"70"},
+    {"skill":"TypeScript", "percentage":"70"},
+    {"skill":"HTML", "percentage":"70"},
+    {"skill":"CSS", "percentage":"70"},
+    {"skill":"JavaScript", "percentage":"60"},
+    {"skill":"SQL", "percentage":"60"},
+    {"skill":"Python", "percentage":"40"},
+    {"skill":"React", "percentage":"5"}
+  ],
+  "experience":[
+    {
+      "place":"Retro Rabbit - Consulting",
+      "info":"Fullstack Developer",
+      "date":" January 2022 - Present",
+      "icon": "pi pi-briefcase"
+    },
+    {
+      "place":"Atlantica Ventures - Consulting",
+      "info":"Fullstack Developer",
+      "date":"June 2023 - Present",
+      "icon": "pi pi-briefcase"
+    },
+    {
+      "place":"First National Bank - Consulting",
+      "info":"Java Developer",
+      "date":"July 2022 - Febuary 2023",
+      "icon": "pi pi-briefcase"
+    },
+    {
+      "place":"Telesure Investment Holdings - Consulting",
+      "info":".Net Developer",
+      "date":"April 2022 - June 2022",
+      "icon": "pi pi-briefcase"
     }
-  },
-  "about": {
-    "buttons": {
-      "backHomeText": "HOME",
-      "backHomeLink": ""
+  ],
+  "education":[
+    {
+      "place":"North West University",
+      "info":"Bachelor's Degree in Information Technology",
+      "date":"2018 - 2020",
+      "icon": "pi pi-graduation-cap"
     },
-    "headings": {
-      "about": "ABOUT ME"
-    },
-    "paragraphsList": [
+    {
+      "place":"North West University",
+      "info":"Honours Degree in Computer Science and Information Systems",
+      "date":"2021 - 2021",
+      "icon": "pi pi-graduation-cap"
+    }
+  ],
+  "projects": [
       {
-        "paragraph": "I am highly skilled and motivated software developer with a strong background in designing, developing, and implementing software solutions. I am dedicated to delivering high-quality and efficient code solutions. With 1 year and 5 months of experience in the industry, I have a proven track record of successfully completing complex projects and collaborating effectively within cross-functional teams."
+        "title": "Lotriet Logistics",
+        "description": "The Lotriet Logistics Website is a modern, responsive web application designed for a logistics company. Built with Angular and integrated with Three.js, the website offers a comprehensive overview of services such as fleet management, logistics and distribution, bulk load transport, and linehaul transport. The application features multilingual support using ngx-translate and is optimized for fast loading times and seamless user experience across various devices.",
+        "image": "assets/images/lotriet-logistics.svg"
       },
       {
-        "paragraph": "My expertise lies in full-stack development, encompassing front-end and back-end technologies.I am Proficient in programming languages such as Java, Python, JavaScript,Typescript ,Net Core and have recently engaged in learning Flutter.I am adept at developing scalable web applications, APIs, and mobile applications. I have hands-on experience with various frameworks and libraries, including VueJs, Angular, and Spring."
+        "title": "Platinum Stars Nursery School",
+        "description": "This project is an improved website for a nursery school. It showcases the school's activities, events, and important information for parents and visitors. The site is built with Angular. Tailwind CSS, PrimeNG components, and PrimeIcons are used for styling and enhancing the UI. The project also utilizes Prettier for code formatting and ESLint for code linting.",
+        "image": "assets/images/platinum-stars.svg"
       },
       {
-        "paragraph": "I am experienced in the entire software development lifecycle, from requirement gathering and ensuring code quality through rigorous testing and debugging processes. Additionally, I am well-versed in version control systems like Git and have a solid understanding of agile development methodologies, enabling me to adapt quickly to changing project requirements and deliver results within deadlines."
-      },
-      {
-        "paragraph": "As a strong problem-solver, I thrive on challenges and enjoy finding innovative solutions to complex technical problems. I possess excellent analytical and communication skills, allowing me to effectively collaborate with stakeholders, understand their needs, and translate them into functional software applications. I am committed to continuous learning and staying updated with the latest industry trends, ensuring the adoption of best practices and the integration of cutting-edge technologies into my work."
+        "title": "Ok Foods & Liquor Napier",
+        "description": "This Angular project is designed for OK Foods and Liquor Napier. It displays monthly specials, showcasing various products with promotional images managed using Azure Blob Storage. The application is user-friendly and aims to keep customers informed about the latest deals and discounts available at OK Foods and Liquor Napier.",
+        "image": "assets/images/ok.svg"
       }
-    ]
-  },
-  "projects": {
-    "heading": "MY PROJECTS",
-    "projectList": [
-      {
-        "title": "The Smile Foundation Project",
-        "description": "This was a personal project that I worked on. The problem I identified and tried to solve was that there was no central place that people could use to make donations to more than one charity at a time without having to continuously browse to different websites. My responsibilities for this project included designing and creating the frontend for the project, creating a database for the project and integrating the frontend and backend with each other so that they could communicate. The technology used here was .NetCore, SQL Server and VueJS.",
-        "image": "assets/images/project1.svg",
-        "link": ""
-      },
-      {
-        "title": "Platinum Stars Nursery School Website",
-        "description": "The Platinum Stars Nursery School Website project was an exciting venture aimed at creating a vibrant online presence for the school. I focused on enhancing accessibility and engagement, designing and developing the frontend with Angular and Tailwind CSS. The result was a visually appealing, warm, and accessible website, inviting visitors to explore its offerings. With intuitive navigation and user-centric design, parents could easily access essential information, updates, and resources. Though there was no database integration, the use of modern technologies ensured seamless functionality and performance, capturing the essence of the nursery school. This project showcased innovation and creativity, offering a delightful online experience for all.",
-        "image": "assets/images/project2.svg",
-        "link": ""
-      }
-    ]
-  },
+      ],
   "contact":{
-    "heading":"CONTACT ME",
-    "subHeading":"Send me a message and I will get back to you",
-    "phone": "068 4233 681",
+    "heading":"Don't Be Shy - Reach Out",
+    "detail":"Feel free to get in touch with me and I will get back to you. I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions",
+    "phone": "+27 68 4233 681",
     "email": "pamela.lotriet@gmail.com",
-    "linkdn": "Pamela Lotriet",
-    "emailPlaceholder": "Please Enter your email address",
-    "messagePlaceholder":"Please Enter your message",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email Address",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder":"Message",
     "buttonText": "SEND"
-  }
+  },
+  "home":{
+    "heading":"Hi!",
+    "subHeading":"I'm Pamela Lotriet",
+    "title":"Fullstack Developer"
+  },
+  "about":{
+    "dividerText":"About Me",
+    "heading":"Behind The Scenes",
+    "description":"I'm a dedicated software developer with 2 years and 7 months of experience in TypeScript, .NET Core, JavaScript, Angular, and database management. I enjoy crafting efficient and scalable software solutions and have a passion for learning new technologies. Outside of work, I love spending time outdoors, reading, participating in charitable activities, and playing games. I'm always eager to grow professionally and personally, embracing new challenges and opportunities."
+  },
+  "skillsInfo":{
+    "dividerText":"Skills"
+  },
+  "experienceInfo":{
+    "dividerText":"Experience & Education"
+  },
+  "projectsInfo":{
+    "dividerText":"My Projects"
+  },
+  "contactInfo":{
+    "dividerText":"Get In Touch"
+  },
+  "imageAlt":"Image Unavailable"
 }

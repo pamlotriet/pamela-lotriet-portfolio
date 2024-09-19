@@ -1,46 +1,48 @@
-@if (show) {
-<div class="bg-primary min-h-screen max-w-screen overflow-x-hidden">
-  <div class="sticky top-0 z-50">
-    <app-navbar></app-navbar>
-  </div>
-  <div class="flex flex-col-reverse md:flex-row sm:flex-col-reverse justify-center items-center h-full w-full">
-    <div class="flex flex-col items-center p-4 md:mr-20">
-      <img class="mb-4" src="assets/images/ContactAlien.svg" alt="Failed to load image" loading="lazy" />
-      <div class="flex flex-col items-center">
-        <p class="text-white font-sans m-2">
-          <i class="pi pi-mobile pr-2"></i>{{ 'contact.phone' | translate }}
-        </p>
-        <p class="text-white font-sans m-2">
-          <i class="pi pi-envelope pr-2"></i>{{ 'contact.email' | translate }}
-        </p>
-        <p class="text-white font-sans m-2">
-          <a href="https://www.linkedin.com/in/pamela-lotriet-b4a1a0169/"><i class="pi pi-linkedin pr-2"></i>{{
-            'contact.linkdn' | translate }}</a>
-        </p>
-      </div>
-    </div>
-    <div class="flex flex-col p-4">
-      <h1 class="text-white text-5xl font-bangers mb-2 text-left">
-        {{ 'contact.heading' | translate }}
-      </h1>
-      <h2 class="text-white text-lg font-sans mb-8 text-left">
-        {{ 'contact.subHeading' | translate }}
-      </h2>
-      <div class="flex flex-col items-center md:items-start">
-        <app-textarea [placeholder]="'contact.emailPlaceholder' | translate"
-          classElements="h-16 w-96 md:w-713 resize-none mt-8 mb-8 sm:w-[calc(100vw-40px)]"></app-textarea>
-        <app-textarea [placeholder]="'contact.messagePlaceholder' | translate"
-          classElements="h-260 w-96 md:w-713 resize-none  sm:w-[calc(100vw-40px)]"></app-textarea>
-        <div class="flex flex-row-reverse w-full justify-end md:justify-start">
-          <app-button [text]="'contact.buttonText' | translate"
-            classElements="text-sm h-35 w-120 rounded-20px bg-primary text-white shadow-custom hover:shadow-custom-hover focus:shadow-custom-focus text-3xl mt-8 mb-8 border-none text-bangers cursor-pointer"></app-button>
+<div
+    class="flex flex-col md:flex-row lg:flex-row xl:flex-row h-full w-screen p-12 md:p-24 lg:p-24 xls:p-24 md:fixed lg:fixed xl:fixed">
+    <div class="flex flex-col text-white md:w-4/5 lg:w-4/5 xl:w-4/5 justify-center items-center">
+        <div class="flex flex-col md:w-4/6 lg:w-4/6 xl:w-4/6">
+            <h1 class="text-white text-4xl font-kiteOne mb-6">{{"contact.heading" | translate}}</h1>
+            <p>{{"contact.detail" | translate}}</p>
+            <div class="flex flex-col mt-12">
+                <div class="flex flex-row items-center mb-2 mt-2">
+                    <div class="flex items-center justify-center rounded-full bg-primary h-12 w-12  mr-4">
+                        <i class="pi pi-phone text-xl text-white"></i>
+                    </div>
+                    <label class="text-xl">{{'contact.phone' | translate}}</label>
+                </div>
+                <div class="flex flex-row items-center mt-2 mb-20">
+                    <div class="flex flex-row items-center justify-center rounded-full bg-primary h-12 w-12 mr-4">
+                        <i class="pi pi-envelope text-xl text-white"></i>
+                    </div>
+                    <label class="text-xl">{{'contact.email' | translate}}</label>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+    <div class="flex flex-col w-full md:w-4/5 lg:w-4/5 xl:w-4/5 justify-center items-center">
+        <div class="flex w-full flex-col">
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="grid col-span-1">
+                    <input type="text" class="rounded-xl bg-grey text-white h-10 w-full p-4"
+                        placeholder="{{ 'contact.namePlaceholder' | translate }}">
+                </div>
+                <div class="grid col-span-1">
+                    <input type="email" class="rounded-xl bg-grey text-white h-10  w-full p-4"
+                        placeholder="{{ 'contact.emailPlaceholder' | translate }}">
+                </div>
+            </div>
+            <div class="flex mb-8">
+                <input type="text" class="rounded-xl bg-grey text-white h-10  w-full p-4"
+                    placeholder="{{ 'contact.subjectPlaceholder' | translate }}">
+            </div>
+            <div class="flex mb-8">
+                <textarea type="text" class="rounded-xl bg-grey text-white h-56  w-full resize-none p-4"
+                    placeholder="{{ 'contact.messagePlaceholder' | translate }}"></textarea>
+            </div>
+            <div class="flex flex-row-reverse mb-8">
+                <app-button text="{{ 'contact.buttonText' | translate }}"></app-button>
+            </div>
+        </div>
+    </div>
 </div>
-} @else {
-<div class="flex justify-center items-center h-screen w-screen overflow-hidden bg-primary">
-  <img class="animate-runaccross" src="assets/images/spaceship.svg" alt="Error loading image" loading="lazy" />
-</div>
-}

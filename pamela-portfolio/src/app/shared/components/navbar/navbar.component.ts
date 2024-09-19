@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-navbar',
@@ -8,4 +9,12 @@ import { RouterModule } from '@angular/router';
   imports: [TranslateModule, RouterModule],
   templateUrl: './navbar.component.html',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  translate = inject(TranslateService);
+  navIcons = toSignal(this.translate.get('navbar.mediaIcons'));
+  routes = toSignal(this.translate.get('navbar.routes'));
+
+  navigate(url: string) {
+    window.open(url, '_blank');
+  }
+}

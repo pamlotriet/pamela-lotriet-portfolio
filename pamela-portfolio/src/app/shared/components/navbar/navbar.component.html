@@ -1,15 +1,25 @@
-<div
-  class="flex flex-row-reverse text-2xl text-white bg-primary sticky top-0 h-20 items-center z-50 mr-8"
->
-  <button
-    class="flex items-center font-bangers"
-    [routerLink]="['about.buttons.backHomeLink' | translate]"
-  >
-    <img
-      class="w-6 h-6 items-center m-4 mr-2"
-      src="assets/images/AlienIcon.svg"
-      alt="Error loading image"
-      loading="lazy"
-    />{{ 'about.buttons.backHomeText' | translate }}
-  </button>
+<div class="flex flex-row w-full bg-black top-0 sticky z-10">
+  <div class="grid grid-cols-2 w-full p-4">
+    <div class="flex flex-row grid-cols-1">
+      <ul class="flex">
+        @for (route of routes(); track route) {
+        <li class="p-2 text-white">
+          <a [routerLink]="route.link " routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            class="decoration-0 font-kiteOne">{{
+            route.name
+            }}</a>
+        </li>
+        }
+      </ul>
+    </div>
+    <div class="flex flex-row-reverse grid-cols-1">
+      <ul class="flex">
+        @for (icon of navIcons(); track icon) {
+        <li class="p-2 text-white cursor-pointer">
+          <i [class]="icon.icon" (click)="navigate(icon.link)"></i>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
 </div>

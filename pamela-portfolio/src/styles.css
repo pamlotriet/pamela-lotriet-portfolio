@@ -1,5 +1,17 @@
 @import 'primeicons/primeicons.css';
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #141514;
+  font-family: KiteOne;
+  overflow: auto
+}
+
+.active {
+  @apply relative underline text-white;
+  text-decoration-thickness: 2px;
+}
