@@ -7,11 +7,17 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { ProgresSpinnerComponent } from '../../shared/components/progres-spinner/progres-spinner.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [TranslateModule, ButtonComponent, ReactiveFormsModule],
+  imports: [
+    TranslateModule,
+    ButtonComponent,
+    ReactiveFormsModule,
+    ProgresSpinnerComponent,
+  ],
   templateUrl: './contact.component.html',
 })
 export class ContactComponent implements OnInit {
