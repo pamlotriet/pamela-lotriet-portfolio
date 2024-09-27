@@ -53,14 +53,14 @@
   "education": [
     {
       "place": "North West University",
-      "info": "Bachelor's Degree in Information Technology",
-      "date": "2018 - 2020",
+      "info": "Honours Degree in Computer Science and Information Systems",
+      "date": "2021 - 2021",
       "icon": "pi pi-graduation-cap"
     },
     {
       "place": "North West University",
-      "info": "Honours Degree in Computer Science and Information Systems",
-      "date": "2021 - 2021",
+      "info": "Bachelor's Degree in Information Technology",
+      "date": "2018 - 2020",
       "icon": "pi pi-graduation-cap"
     }
   ],
